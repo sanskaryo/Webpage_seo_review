@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent, useMemo } from "react";
-import { FaSearch, FaExclamationTriangle, FaCheckCircle, FaInfoCircle, FaTimes, FaChevronDown, FaChevronUp, FaQuestionCircle } from "react-icons/fa";
+import { FaSearch, FaExclamationTriangle, FaCheckCircle, FaInfoCircle, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Image from "next/image";
 
 // Define the SEO data interface
@@ -26,15 +26,6 @@ interface SeoData {
   keywords: string;
   author: string;
   hasStructuredData: boolean;
-}
-
-// Define the SeoCheckItem props interface
-interface SeoCheckItemProps {
-  title: string;
-  value: string;
-  status: 'pass' | 'warning' | 'fail';
-  recommendation: string;
-  explanation?: string;
 }
 
 // Define the SEO score categories
@@ -371,7 +362,7 @@ export default function Home() {
             SEO Tag Analyzer
           </h1>
           <p className="text-sm md:text-base text-blue-200">
-            Analyze your website's SEO tags with AI precision
+            Analyze your website&apos;s SEO tags with AI precision
           </p>
         </header>
 
@@ -820,49 +811,8 @@ export default function Home() {
       {/* Responsive Footer */}
       <footer className="mt-8 py-4 md:py-6 text-center text-xs md:text-sm text-blue-300 bg-gray-900/70 border-t border-blue-500/20">
         <p>SEO Tag Analyzer &copy; {new Date().getFullYear()}</p>
-        <p className="mt-1">Made by AI and ❤️ by sanskar khandelwal</p>
+        <p className="mt-1">Made by AI and &apos;❤️&apos; by sanskar khandelwal</p>
       </footer>
-    </div>
-  );
-}
-
-// Component for individual SEO check items
-function SeoCheckItem({ title, value, status, recommendation, explanation }: SeoCheckItemProps) {
-  const [showTooltip, setShowTooltip] = useState(false);
-  
-  return (
-    <div className="mb-3 p-3 bg-gray-900/30 rounded-lg border border-gray-700">
-      <div className="flex justify-between items-start">
-        <div className="flex items-start">
-          <div className="mr-2 mt-1">
-            {status === "pass" && <FaCheckCircle className="text-emerald-400" />}
-            {status === "warning" && <FaExclamationTriangle className="text-amber-400" />}
-            {status === "fail" && <FaTimes className="text-rose-400" />}
-          </div>
-          <div>
-            <div className="flex items-center">
-              <h4 className="text-sm md:text-base font-medium text-blue-200">{title}</h4>
-              <button 
-                className="ml-2 text-blue-300 hover:text-blue-400"
-                onClick={() => setShowTooltip(!showTooltip)}
-                aria-label="Show explanation"
-              >
-                <FaQuestionCircle className="text-xs md:text-sm" />
-              </button>
-            </div>
-            <p className="text-xs md:text-sm text-gray-400 mt-1">{value}</p>
-          </div>
-        </div>
-      </div>
-      
-      {showTooltip && (
-        <div className="mt-3 p-3 bg-blue-900/30 rounded-lg border border-blue-500/30 text-xs md:text-sm">
-          <p className="text-blue-200 mb-2"><span className="font-medium">What this means:</span> {explanation}</p>
-          {recommendation && (
-            <p className="text-emerald-300"><span className="font-medium">Recommendation:</span> {recommendation}</p>
-          )}
-        </div>
-      )}
     </div>
   );
 }

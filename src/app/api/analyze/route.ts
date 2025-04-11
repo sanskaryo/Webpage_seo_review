@@ -53,11 +53,8 @@ export async function POST(request: Request) {
     };
 
     return NextResponse.json(seoData);
-  } catch (error: any) {
-    console.error('Error analyzing website:', error);
-    return NextResponse.json(
-      { error: error.message || 'Failed to analyze website' },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    console.error(error);
+    return new Response("Internal Server Error", { status: 500 });
   }
 }
