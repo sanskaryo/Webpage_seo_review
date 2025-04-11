@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <rect x="50" y="50" width="1100" height="530" rx="20" stroke="#3B82F6" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Circular progress indicators -->
+  <g transform="translate(200, 315)">
+    <circle cx="0" cy="0" r="100" stroke="#1E293B" stroke-width="20" fill="none"/>
+    <circle cx="0" cy="0" r="100" stroke="#10B981" stroke-width="20" fill="none" stroke-dasharray="502" stroke-dashoffset="125"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">75</text>
+  </g>
+  
+  <g transform="translate(450, 315)">
+    <circle cx="0" cy="0" r="100" stroke="#1E293B" stroke-width="20" fill="none"/>
+    <circle cx="0" cy="0" r="100" stroke="#F59E0B" stroke-width="20" fill="none" stroke-dasharray="502" stroke-dashoffset="251"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">50</text>
+  </g>
+  
+  <g transform="translate(700, 315)">
+    <circle cx="0" cy="0" r="100" stroke="#1E293B" stroke-width="20" fill="none"/>
+    <circle cx="0" cy="0" r="100" stroke="#F43F5E" stroke-width="20" fill="none" stroke-dasharray="502" stroke-dashoffset="376"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">25</text>
+  </g>
+  
+  <g transform="translate(950, 315)">
+    <circle cx="0" cy="0" r="100" stroke="#1E293B" stroke-width="20" fill="none"/>
+    <circle cx="0" cy="0" r="100" stroke="#38BDF8" stroke-width="20" fill="none" stroke-dasharray="502" stroke-dashoffset="100"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">80</text>
+  </g>
+  
+  <!-- Title and description -->
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle">SEO Tag Analyzer</text>
+  <text x="600" y="180" font-family="Arial, sans-serif" font-size="32" fill="#94A3B8" text-anchor="middle">Check Your Website's SEO Health</text>
+  
+  <!-- Bottom text -->
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="24" fill="#94A3B8" text-anchor="middle">Visual SEO Analysis with Interactive Feedback</text>
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="20" fill="#64748B" text-anchor="middle">A Vibe Coding Project by Replit and DeepLearning.AI</text>
+</svg>
