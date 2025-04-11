@@ -78,6 +78,14 @@ export default function Home() {
     }
   };
 
+  // Add a reset button to clear the form and results
+  const handleReset = () => {
+    setUrl("");
+    setError("");
+    setSeoData(null);
+    setExpandedCategory(null);
+  };
+
   // Calculate SEO score based on the analysis results
   const seoScore = useMemo<SeoScoreSummary | null>(() => {
     if (!seoData) return null;
@@ -387,6 +395,13 @@ export default function Home() {
             >
               {loading ? "Analyzing..." : "Analyze"}
             </button>
+            <button
+              type="button"
+              onClick={handleReset}
+              className="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-500 hover:to-gray-700 text-white font-medium rounded-lg transition-all duration-200 shadow-[0_0_10px_rgba(56,189,248,0.3)]"
+            >
+              Reset
+            </button>
           </form>
 
           {error && (
@@ -497,6 +512,9 @@ export default function Home() {
                       This score is based on the presence and quality of key SEO elements. 
                       A higher score indicates better SEO implementation, but remember that 
                       content quality and relevance are also crucial for search rankings.
+                    </p>
+                    <p className="text-xs md:text-sm text-blue-300 mt-2">
+                      <span className="font-bold">Tip:</span> Hover over the icons for more details.
                     </p>
                   </div>
                 </div>
@@ -640,6 +658,8 @@ export default function Home() {
                             type="button"
                             onClick={() => toggleCategory(category)}
                             className="ml-2 flex-shrink-0 text-xs text-blue-300 hover:text-blue-400 transition-colors duration-200 bg-blue-900/30 px-2 py-1 rounded-md"
+                            aria-expanded={expandedCategory === category}
+                            aria-label={`Toggle details for ${category}`}
                           >
                             {expandedCategory === category ? "Hide" : "Details"}
                           </button>
